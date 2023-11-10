@@ -1,0 +1,17 @@
+INSERT INTO cliente (nome, cpf, cep, email, senha)
+VALUES ('Nome do Cliente', '123.456.789-00', '12345-678', 'email@example.com', 'senha123');
+
+INSERT INTO produto (nome, valor, peso, descricao, tamanho, quantidade, urlimg)
+VALUES ('Nome do Produto', 19.99, 0.75, 'Descrição do Produto', 'M', 50, 'http://exemplo.com/imagem.jpg');
+
+INSERT INTO pedido(idpedido, cliente_idcliente, produto_idproduto, diagnostico)
+VALUES(4, 3, 3, 'PROTESE DE PERNA')
+
+SELECT c.nome, c.cep, p.nome, p.valor FROM pedido pe 
+	INNER JOIN cliente c ON pe.cliente_idcliente = c.idcliente
+	INNER JOIN produto p ON p.idproduto = pe.produto_idproduto
+
+
+UPDATE produto
+	SET quantidade = nova_quantidade
+WHERE idproduto = seu_id;
