@@ -1,1 +1,1 @@
-# LabTech---APS
+# LabTech
